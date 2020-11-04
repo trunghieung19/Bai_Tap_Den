@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="light" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YtI-FK-mAo">
+                                <rect key="frame" x="73" y="91" width="268" height="467"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYZ-1o-ICQ">
+                                <rect key="frame" x="183" y="616" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="QiQ-Jv-2Ug"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="offBuilb:" destination="BYZ-38-t0r" eventType="valueChanged" id="oBZ-54-vVZ"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0am-sI-kHg">
+                                <rect key="frame" x="150" y="673" width="114" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" red="0.23658359579999999" green="1" blue="0.2130296126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Tắt Đèn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pd-Y5-z84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MYZ-1o-ICQ" secondAttribute="trailing" constant="184" id="0c2-Ho-huy"/>
+                            <constraint firstItem="0am-sI-kHg" firstAttribute="top" secondItem="MYZ-1o-ICQ" secondAttribute="bottom" constant="26" id="8Ug-0k-qNB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YtI-FK-mAo" secondAttribute="trailing" constant="73" id="BDs-ng-O5e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0am-sI-kHg" secondAttribute="trailing" constant="150" id="DRZ-hP-Nfp"/>
+                            <constraint firstItem="0am-sI-kHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="NJl-it-lA0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MYZ-1o-ICQ" secondAttribute="bottom" constant="215" id="Scl-0z-ScO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YtI-FK-mAo" secondAttribute="bottom" constant="304" id="Sdm-fz-I5O"/>
+                            <constraint firstItem="MYZ-1o-ICQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="183" id="huh-yz-UKZ"/>
+                            <constraint firstItem="YtI-FK-mAo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="huk-Ar-Tyn"/>
+                            <constraint firstItem="YtI-FK-mAo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="mPZ-tx-717"/>
+                            <constraint firstItem="MYZ-1o-ICQ" firstAttribute="top" secondItem="YtI-FK-mAo" secondAttribute="bottom" constant="58" id="mUF-fg-zVQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0am-sI-kHg" secondAttribute="bottom" constant="159" id="xmB-nM-0ur"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bulbImageView" destination="YtI-FK-mAo" id="VHA-6a-dQV"/>
+                        <outlet property="isOnButton" destination="0am-sI-kHg" id="vdl-fg-417"/>
+                        <outlet property="isOnSwitch" destination="MYZ-1o-ICQ" id="8tb-TQ-LSq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
